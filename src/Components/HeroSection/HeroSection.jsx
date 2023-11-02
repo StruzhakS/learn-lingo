@@ -7,6 +7,7 @@ import {
   HeroParagraph,
   GetStartedBtn,
   ItalicSpan,
+  ImageWrapper,
 } from './HeroSection.styled';
 
 const HeroSection = () => {
@@ -20,11 +21,11 @@ const HeroSection = () => {
           Embark on an Exciting Language Journey with Expert Language Tutors: Elevate your language
           proficiency to new heights by connecting with highly qualified and experienced tutors.
         </HeroParagraph>
-        <GetStartedBtn type="button">Get started</GetStartedBtn>
+        <GetStartedBtn to={'teachers'}>Get started</GetStartedBtn>
       </GetStarted>
-      <div>
+      <ImageWrapper>
         <img src={heroImg} alt="woman and macbook" />
-      </div>
+      </ImageWrapper>
     </HeroWrapper>
   );
 };

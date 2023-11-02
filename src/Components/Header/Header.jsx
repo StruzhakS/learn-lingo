@@ -11,10 +11,10 @@ import {
   RegistrationBtn,
 } from './Header.styled';
 
-const Header = () => {
+const Header = ({ openModal, openRegisterModal }) => {
   return (
     <HeaderBox>
-      <LogoLink>
+      <LogoLink to={'/'}>
         <img src={logoUkraine} alt="flags of Ukraine" />
         LearnLingo
       </LogoLink>
@@ -25,10 +25,12 @@ const Header = () => {
       </Navigation>
 
       <Authentication>
-        <LoginBtn type="button">
+        <LoginBtn type="button" onClick={openModal}>
           <img src={loginImg} alt="Login" /> Log in
         </LoginBtn>
-        <RegistrationBtn type="button">Registration</RegistrationBtn>
+        <RegistrationBtn type="button" onClick={openRegisterModal}>
+          Registration
+        </RegistrationBtn>
       </Authentication>
     </HeaderBox>
   );
