@@ -53,13 +53,26 @@ const RegisterModal = ({ modalIsOpen, closeModal }) => {
                 <ErrorLoginMessage component="div" name="name" />
                 <ErrorLoginMessage component="span" name="email" />
                 <ErrorLoginMessage component="div" name="password" />
-                <InputLoginModalField type="text" label="name" name="name" placeholder="Name" />
-                <InputLoginModalField type="email" name="email" label="email" placeholder="Email" />
+                <InputLoginModalField
+                  type="text"
+                  label="name"
+                  name="name"
+                  placeholder="Name"
+                  autoComplete="off"
+                />
+                <InputLoginModalField
+                  type="email"
+                  name="email"
+                  label="email"
+                  autoComplete="off"
+                  placeholder="Email"
+                />
                 <InputLoginModalField
                   type="text"
                   name="password"
                   label="Password"
                   placeholder="Password"
+                  autoComplete="off"
                 />
                 <LoginBtn type="submit" disabled={isSubmitting}>
                   Sign Up

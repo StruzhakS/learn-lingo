@@ -1,12 +1,13 @@
 import './App.css';
 import Header from '../Header/Header';
-import HeroSection from '../HeroSection/HeroSection';
-import StatisticSection from '../StatisticSection/StatisticSection';
 import { Container } from './App.styled';
 import LoginModal from '../Modal/LoginModal';
 import RegisterModal from '../Modal/RegisterModal';
 import React, { useState } from 'react';
 import Modal from 'react-modal';
+import { Route, Routes } from 'react-router-dom';
+import TeacherPage from '../../Pages/TeacherPage/TeacherPage';
+import Homepage from '../HomePage/Homepage';
 
 Modal.setAppElement('#root');
 
@@ -33,8 +34,11 @@ function App() {
     <Container>
       <Header openModal={openModal} openRegisterModal={openRegisterModal} />
       <main>
-        <HeroSection />
-        <StatisticSection />
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+
+          <Route path="/teachers" element={<TeacherPage />} />
+        </Routes>
       </main>
       <LoginModal modalIsOpen={modalIsOpen} closeModal={closeModal} />
       <RegisterModal modalIsOpen={registerModalIsOpen} closeModal={closeRegisterModal} />

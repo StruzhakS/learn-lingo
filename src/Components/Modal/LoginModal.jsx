@@ -45,11 +45,21 @@ const LoginModal = ({ modalIsOpen, closeModal, afterOpenModal }) => {
             return (
               <LoginForm>
                 <LabelModal>
-                  <InputLoginModalField type="email" name="email" placeholder={'Email'} />
+                  <InputLoginModalField
+                    type="email"
+                    name="email"
+                    placeholder={'Email'}
+                    autoComplete="off"
+                  />
                   <ErrorLoginMessage name="email" component="div" />
                 </LabelModal>
                 <LabelModal>
-                  <InputLoginModalField type="password" name="password" placeholder={'Password'} />
+                  <InputLoginModalField
+                    type="password"
+                    name="password"
+                    placeholder={'Password'}
+                    autoComplete="off"
+                  />
                   <ErrorLoginMessage name="password" component="div" />
                 </LabelModal>
                 <LoginBtn type="submit" disabled={isSubmitting}>

@@ -9,8 +9,11 @@ import {
   ItalicSpan,
   ImageWrapper,
 } from './HeroSection.styled';
+import { getAllTeachers } from '../../services';
 
 const HeroSection = () => {
+  getAllTeachers();
+
   return (
     <HeroWrapper>
       <GetStarted>
