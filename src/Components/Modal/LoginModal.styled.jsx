@@ -65,7 +65,6 @@ export const InputLoginModalField = styled(Field)`
   border-radius: 12px;
   border: 1px solid rgba(18, 20, 23, 0.1);
   color: rgba(18, 20, 23, 0.8);
-  /* margin-bottom: 8px; */
 
   ::placeholder {
     color: inherit;

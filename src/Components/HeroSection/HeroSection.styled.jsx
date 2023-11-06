@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const HeroWrapper = styled.section`
   display: flex;
@@ -41,7 +41,29 @@ export const HeroParagraph = styled.p`
   margin-bottom: 64px;
 `;
 
+const fade = keyframes`
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+`;
+
 export const GetStartedBtn = styled(Link)`
+  animation: ${fade} 2s linear infinite alternate-reverse;
+
   display: inline-flex;
   padding: 16px 88px;
   justify-content: center;
@@ -57,6 +79,7 @@ export const GetStartedBtn = styled(Link)`
 
   :hover {
     scale: 1.02;
+    animation: none;
   }
 `;
 

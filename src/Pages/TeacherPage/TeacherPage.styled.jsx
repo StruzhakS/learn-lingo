@@ -1,6 +1,7 @@
+import { Form } from 'formik';
 import styled from 'styled-components';
 
-export const FilterBox = styled.div`
+export const FilterBox = styled(Form)`
   display: flex;
   gap: 20px;
 `;
@@ -29,18 +30,27 @@ export const SelectOfFilter = styled.select`
   align-items: center; */
   /* gap: 133px; */
   border-radius: 14px;
-  /* option {
-  
-  } */
+  option {
+    color: rgba(18, 20, 23, 0.2);
+
+    background: white;
+    font-weight: small;
+    display: flex;
+    white-space: pre;
+    min-height: 20px;
+    padding: 0px 2px 1px;
+  }
 `;
 
 export const OptionOfFIlter = styled.option`
   /* color: black; */
-  background: red;
+  /* background: red; */
+  padding: 20px 20px;
   font-weight: small;
   display: flex;
   /* white-space: pre; */
   min-height: 20px;
   padding: 0px 2px 1px;
   border-radius: 10px;
+  color: rgba(13, 98, 224, 0.2);
 `;
